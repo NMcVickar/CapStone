@@ -1,0 +1,124 @@
+body {
+	background-color: #444343;
+	margin: 0;
+}
+
+#root {
+	background-color: #444343;
+	margin: 0;
+	display: grid;
+	grid-template-areas: 'navigation' 'header' 'content' 'footer';
+	grid-template-rows: min-content min-content auto min-content;
+}
+
+#navigation {
+	font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+	color: black;
+	display: inline;
+	justify-content: space-between;
+	background-color: gray;
+	grid-area: navigation;
+	position: sticky;
+	top: 0;
+
+	> ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	li {
+		color: red;
+	}
+
+	a + ul:hover,
+	a:hover + ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	a + ul {
+		display: none;
+		position: absolute;
+		left: 0;
+	}
+
+	> ul > li {
+		display: inline;
+		position: relative;
+	}
+}
+
+#header {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	grid-area: header;
+	display: inline;
+}
+
+#content {
+	background-color: #bbbbbb;
+	padding: 10px;
+	display: inline;
+	grid-area: content;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.about > ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.about > ul > li {
+		display: inline;
+		position: relative;
+	}
+}
+#footer {
+	padding: 5px;
+	min-height: 20px;
+	background-color: steelblue;
+	grid-area: footer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: oblique;
+}
+
+.container {
+	width: 100%;
+}
+
+.me {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+}
+
+.about ul ul {
+	display: none;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: azure;
+}
+
+.link {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: steelblue;
+}
+
+// .dot {
+// 	color: hotpink;
+// 	border: solid black 5px;
+// 	position: fixed;
+// }
+
+@media screen and (max-width: 500px) {
+	#root {
+		grid-template-areas: 'navigation header' 'navigation content' 'navigation footer' 'navigation b-nav';
+		grid-template-rows: min-content auto min-content min-content;
+		grid-template-columns: 20vw auto;
+	}
+	#navigation > ul {
+		flex-direction: column;
+	}
+}
