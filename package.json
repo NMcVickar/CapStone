@@ -1,0 +1,36 @@
+{
+    "name": "NickMcVickar",
+    "version": "1.0.0",
+    "description": "I am currently learning to code webapps. I am attending a class to lean coding because i felt that it would work better for me after not doing well in reguar college.",
+    "main": "index.js",
+    "scripts": {
+      "start": "parcel build index.html && cp _redirects ./dist/",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/NMcVickar/SavvyPortfolio.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/NMcVickar/SavvyPortfolio/issues"
+    },
+    "homepage": "https://github.com/NMcVickar/SavvyPortfolio#readme",
+    "devDependencies": {
+      "cssnano": "^4.1.0",
+      "eslint": "^5.3.0",
+      "node-sass": "^4.9.3"
+    },
+    "dependencies": {
+      "axios": "^0.18.0",
+      "components": "^0.1.0",
+      "lodash": "^4.17.11",
+      "navigo": "^7.1.2",
+      "parcel": "^1.9.7",
+      "popmotion": "^8.4.0",
+      "victor": "^1.1.0"
+    }
+  }
+  
