@@ -112,6 +112,11 @@ body {
 // 	position: fixed;
 // }
 
+img {
+	width: 90px;
+	height: 80px;
+}
+
 @media screen and (max-width: 500px) {
 	#root {
 		grid-template-areas: 'navigation header' 'navigation content' 'navigation footer' 'navigation b-nav';
