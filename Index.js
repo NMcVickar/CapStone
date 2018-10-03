@@ -2,6 +2,8 @@ import Navigo from 'navigo';
 import Axios from 'axios';
 import Victor from 'victor';
 import Navigation from './components/Navigation';
+import Game from './components/Dots';
+import Tracker from './components/MouseTracker';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
@@ -12,7 +14,7 @@ var router = new Navigo(window.location.origin);
 
 // The vars below are for the dropdown lits
 var tog = [ true, true, true ];
-var visibility = [ 'none', 'none', 'none' ];
+var visibility = [ 'block', 'block', 'block' ];
 var about;
 var dropdown;
 // End of Dropdown Vars
@@ -33,7 +35,8 @@ function render(state){
     root.innerHTML = `
             ${Navigation(state[state.active])}
             ${Header(state)}
-            ${Content(state)}
+			${Content(state)}
+			${Game(state)}
             ${Footer(state)}
         `;
 
@@ -63,6 +66,11 @@ function render(state){
         });
     }
     // End of Dropdown set
+
+    Game();
+    var vec = new Victor(event.clientX, event.clientY);
+
+    console.log('mouse location:', vec);
 
     router.updatePageLinks();
 }
@@ -108,12 +116,12 @@ Axios.get('https://api.github.com/users/nmcvickar/repos', {
     });
 });
 
-// console.log(Game());
-// store.dispatch((state) => {
-//     state.Dots;
+console.log(Game());
+store.dispatch((state) => {
+    state.Dots;
 
-//     return state;
-// });
+    return state;
+});
 
 // if(vec == g){
 //     store.dispatch((state) => {
