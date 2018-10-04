@@ -6,25 +6,21 @@ function Game(){
     var bottomRight = new Victor(900, 730);
 
     // => x: 10, y: 166 (one random component randomized)
-    return Victor(460, 600)
-        .randomizeAny(topLeft, bottomRight)
+    Victor(460, 600)
+        .randomize(topLeft, bottomRight)
         .toObject();
 }
 
 export default function Dot(){
-    var coordinates = Game();
-    // var vec = new Victor(event.clientX, event.clientY);
-    // console.log(coordinates);
+    var topLeft = new Victor(20, 470);
+    var bottomRight = new Victor(900, 730);
+    //    var coordinates = Game();
+    var pos = Victor.fromObject(
+        Victor(460, 600)
+            .randomize(topLeft, bottomRight)
+            .toObject()
+    );
 
-    return `
-<div class="dot" style="top:${coordinates.y}px;right:${coordinates.x}px">
-</div>
-`;
+    return `<div class="dot" style="top:${pos.y}px;right:${pos.x}px">
+</div>`;
 }
-
-// track mouse
-
-// //export default function OnMouseMove(event){
-//     var vec = new Victor(event.clientX, event.clientY);
-
-//     console.log('mouse location:', vec)

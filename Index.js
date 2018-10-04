@@ -68,11 +68,8 @@ function render(state){
     // End of Dropdown set
 
     Game();
-    var vec = new Victor(event.clientX, event.clientY);
 
-    console.log('mouse location:', vec);
-
-    router.updatePageLinks();
+    document.addEventListener('mousemove', Tracker);
 }
 
 // End or Render Function
