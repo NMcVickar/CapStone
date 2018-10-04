@@ -67,9 +67,7 @@ function render(state){
     }
     // End of Dropdown set
 
-    Game();
-
-    document.addEventListener('mousemove', Tracker);
+    document.addEventListener('click', Tracker);
 }
 
 // End or Render Function
@@ -113,7 +111,6 @@ Axios.get('https://api.github.com/users/nmcvickar/repos', {
     });
 });
 
-console.log(Game());
 store.dispatch((state) => {
     state.Dots;
 
@@ -127,5 +124,6 @@ store.dispatch((state) => {
 //         return state;
 //     });
 // }
+Game();
 
 store.addStateListener(render);
