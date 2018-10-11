@@ -2,7 +2,10 @@ import Navigo from 'navigo';
 import Axios from 'axios';
 import Victor from 'victor';
 import Navigation from './components/Navigation';
-import Game from './components/Dots';
+import Background from './components/Dots';
+import Dot from './components/Dots';
+// import renderDot from './components/renderDot';
+// import eraseDot from './components/eraseDot';
 import Tracker from './components/MouseTracker';
 import Header from './components/Header';
 import Content from './components/Content';
@@ -11,6 +14,10 @@ import store from './store/Store';
 
 var root = document.querySelector('#root');
 var router = new Navigo(window.location.origin);
+
+// store.state.dot;
+
+let i = 0;
 
 // The vars below are for the dropdown lits
 var tog = [ true, true, true ];
@@ -32,13 +39,15 @@ function show(event){
 function render(state){
     var state = store.getState();
 
+    console.log('state:', state);
+
     root.innerHTML = `
             ${Navigation(state[state.active])}
             ${Header(state)}
-			${Content(state)}
-			${Game(state)}
+            ${Content(state)}
             ${Footer(state)}
         `;
+    //
 
     // greeter.render(root);
 
@@ -65,9 +74,20 @@ function render(state){
             show(event);
         });
     }
-    // End of Dropdown set
 
-    document.addEventListener('click', Tracker);
+    // End of Dropdown set
+    document.addEventListener('click', Background);
+    Dot();
+    /*    state.dot = eraseDot(
+        state.dot,
+        store.dispatch((state) => {
+            state.dot = Dot();
+
+            return state;
+        })
+    );
+*/
+    // document.addEventListener('click', Tracker);
 }
 
 // End or Render Function
@@ -81,6 +101,11 @@ router
     .on('/', () => handelNavigation('Home'))
     .resolve();
 
+// router
+//     .on(eraseDot(), (params) => handelNavigation(params.page))
+//     .on('/', () => handelNavigation('Home'))
+//     .resolve();
+
 Axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
     store.dispatch((state) => {
         state.posts = response.data;
@@ -89,16 +114,16 @@ Axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
     });
 });
 
-Axios.get(
-    'https://api.openweathermap.org/data/2.5/weather?q=Belleville,62223&APPID=94f1c8fc237e5c6513b5c800e4c67e16'
-).then((response) => {
-    store.dispatch((state) => {
-        state.Weather = response.data;
+/* Axios.get(
+     'https://api.openweathermap.org/data/2.5/weather?q=Belleville,62223&APPID=94f1c8fc237e5c6513b5c800e4c67e16'
+ ).then((response) => {
+     store.dispatch((state) => {
+         state.Weather = response.data;
 
-        return state;
-    });
-});
-
+         return state;
+     });
+ });
+*/
 Axios.get('https://api.github.com/users/nmcvickar/repos', {
     'Headers': {
         Authorization: `token ${process.env.GITHUB_API_KEY}`, //eslint-disable-line
@@ -111,19 +136,12 @@ Axios.get('https://api.github.com/users/nmcvickar/repos', {
     });
 });
 
+/*
 store.dispatch((state) => {
-    state.Dots;
+    state.dot = Dot();
 
     return state;
 });
-
-// if(vec == g){
-//     store.dispatch((state) => {
-//         state.Dots;
-
-//         return state;
-//     });
-// }
-Game();
+*/
 
 store.addStateListener(render);

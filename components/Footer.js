@@ -1,7 +1,6 @@
 import Weather from './Weather';
 
-
-export default function Footer(state) {
+export default function Footer(state){
     return `
 <div id=footer>
     <div class="container">
@@ -11,15 +10,19 @@ export default function Footer(state) {
                     Give me a call
                 </a>
             </li>
-            <li>
-                <a href="mailto:nmcvickar@aol.com"> Email me </a>
+            <li
+            ><p>
+            Send me an E-mail
+                <a href="mailto:nmcvickar@aol.com"> <i class="far fa-envelope"></i>
+                </a>
+            </p>
             </li>
             <li>
+            <p>
+            Check out my GitHub Profile
                 <a href="https://github.com/NMcVickar" target="_blank"> <i class="fab fa-github"></i> </a>
-            </li>
-            <li>
-            ${Weather(state.Weather)}
-            </li>
+            </p>
+          </li>
         </ul>
     </div>
 </div>

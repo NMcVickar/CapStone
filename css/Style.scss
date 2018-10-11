@@ -32,13 +32,6 @@ body {
     color: red;
   }
 
-  a + ul:hover,
-  a:hover + ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
   a + ul {
     display: none;
     position: absolute;

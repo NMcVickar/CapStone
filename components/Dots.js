@@ -1,29 +1,53 @@
 import Victor from 'victor';
 
-/* function Game(){
-    // bounds
-    var topLeft = new Victor(20, 470);
-    var bottomRight = new Victor(900, 730);
+export default function Background(){
+    var height = document.getElementById('root').offsetHeight;
+    var width = document.getElementById('root').offsetWidth;
+    var random =
+        '#' +
+        (
+            '000000' +
+            Math.random()
+                .toString(16)
+                .slice(2, 8)
+                .toUpperCase()
+        ).slice(-6);
 
-    // => x: 10, y: 166 (one random component randomized)
-    Victor(460, 600)
-        .randomize(topLeft, bottomRight)
-        .toObject();
+    document.body.style.backgroundColor = random;
+    console.log('Window height is:', height);
+    console.log('Window width is:', width);
+}
+
+/*export function Dot(){
+    var topLeft = new Victor(0, 0);
+    var bottomRight = new Victor(width, height);
+
+    var pos = Victor(460, 600).randomize(topLeft, bottomRight);
+
+    console.log('pos:', pos);
+
+    // return pos;
+
+    return `<div class="dot" style="left:${pos.x}px;top:${pos.y}px">
+ </div>`;
 }
 */
 
-export default function Dot(){
-    var topLeft = new Victor(20, 470);
-    var bottomRight = new Victor(900, 730);
+/*
+  let i = 0;
+    // var coords = Array();
 
-    var pos = Victor.fromObject(
-        Victor(460, 600)
-            .randomize(topLeft, bottomRight)
-            .toObject()
-    );
+    while(i <= 200){
+        i++;
+        console.log('i:', i);
+        
+        var x = Math.random();
+        var y = Math.random();
 
-    console.log(pos);
+        x *= 100;
+        y *= 100;
+        continue;
+    }
 
-    return `<div class="dot" style="left:${pos.x}px;top:${pos.y}px">
-</div>`;
-}
+    return `<div class="dot" style="left: ${x} px;top: ${y} px" />`;
+*/
