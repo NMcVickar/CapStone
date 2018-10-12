@@ -47,17 +47,6 @@ function render(state){
             ${Content(state)}
             ${Footer(state)}
         `;
-    //
-
-    // greeter.render(root);
-
-    // Setting an element to a class
-    // document.querySelector('h1').addEventListener('click',(event) => {
-    //     var animation = tween();
-    //     var title = styler(event.target);
-
-    //     animation.start((value) => title.set(value));
-    // });
 
     // Setting Dropdown Lists values
     about = document.querySelectorAll('.about>ul>li');
@@ -74,19 +63,9 @@ function render(state){
             show(event);
         });
     }
-
     // End of Dropdown set
     document.addEventListener('click', Background);
-    Dot();
-    /*    state.dot = eraseDot(
-        state.dot,
-        store.dispatch((state) => {
-            state.dot = Dot();
 
-            return state;
-        })
-    );
-*/
     // document.addEventListener('click', Tracker);
 }
 
