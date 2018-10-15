@@ -15,8 +15,6 @@ import store from './store/Store';
 var root = document.querySelector('#root');
 var router = new Navigo(window.location.origin);
 
-// store.state.dot;
-
 let i = 0;
 
 // The vars below are for the dropdown lits

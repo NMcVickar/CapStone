@@ -14,8 +14,6 @@ export default function Background(){
         ).slice(-6);
 
     document.body.style.backgroundColor = random;
-    console.log('Window height is:', height);
-    console.log('Window width is:', width);
 }
 
 /*export function Dot(){
