@@ -62,7 +62,10 @@ function render(state){
         });
     }
     // End of Dropdown set
-    document.addEventListener('click', Background);
+
+    $('.carousel').carousel();
+
+    // document.addEventListener('click', Background);
 
     // document.addEventListener('click', Tracker);
 }

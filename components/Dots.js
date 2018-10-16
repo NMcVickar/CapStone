@@ -16,7 +16,7 @@ export default function Background(){
     document.body.style.backgroundColor = random;
 }
 
-/*export function Dot(){
+/* export function Dot(){
     var topLeft = new Victor(0, 0);
     var bottomRight = new Victor(width, height);
 

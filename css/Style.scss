@@ -1,11 +1,14 @@
+
+
 body {
-  background-color: #444343;
+  background-color: skyblue;
   margin: 0;
 }
 
 #root {
   margin: 0;
   display: grid;
+  box-sizing: border-box;
   font-family: 'Eczar', serif;
   grid-template-areas: 'navigation' 'header' 'content' 'footer';
   grid-template-rows: min-content min-content auto min-content;
@@ -44,14 +47,12 @@ body {
 }
 
 #header {
-  color: white;
   display: inline;
   grid-area: header;
   padding: 10px;
 }
 
 #content {
-  color: White;
   display: inline;
   grid-area: content;
   padding: 10px;

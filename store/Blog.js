@@ -1,5 +1,5 @@
 export default {
-    'links': [ 'Home', 'Projects', 'Contact' ],
+    'links': [ 'Home', 'Contact' ],
     'title': 'The Face Behind the Page',
     'body': 'blog',
 };
