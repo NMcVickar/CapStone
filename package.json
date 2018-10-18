@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NMcVickar/SavvyPortfolio.git"
+    "url": "git+https://github.com/NMcVickar/CapStone.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NMcVickar/SavvyPortfolio/issues"
+    "url": "https://github.com/NMcVickar/CapStone/issues"
   },
-  "homepage": "https://github.com/NMcVickar/SavvyPortfolio#readme",
+  "homepage": "https://github.com/NMcVickar/CapStone#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.4.0",
     "cssnano": "^4.1.0",
