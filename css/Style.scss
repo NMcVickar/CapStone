@@ -119,6 +119,7 @@ img {
 
 @media screen and (max-width: 500px) {
   #root {
+    margin: 0;
     grid-template-areas: 'navigation header' 'navigation content' 'navigation footer';
     grid-template-rows: min-content auto min-content min-content;
     grid-template-columns: 20vw auto;
