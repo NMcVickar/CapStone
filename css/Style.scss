@@ -58,6 +58,7 @@ body {
   padding: 10px;
 
   .about > ul {
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -87,7 +88,7 @@ body {
 }
 
 .about ul ul {
-  color: azure;
+  color: black;
   display: none;
   font-family: 'Work Sans', sans-serif;
   padding: 0;
@@ -128,7 +129,8 @@ img {
   #navigation > ul {
     flex-direction: column;
   }
-  .about{
-    padding: 0;
+  .about ul{
+    padding-inline-start: 0;
+    justify-content: center;
   }
 }
