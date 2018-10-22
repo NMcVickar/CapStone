@@ -43,7 +43,12 @@ Generalized anxiety disorder symptoms include:
     <li>Difficulty controlling feelings of worry</li>
     <li>Having sleep problems, such as difficulty falling or staying asleep, restlessness, or unsatisfying sleep</li>
 </ul>
-
+<sub>
+    List Courtsey of
+    <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders/index.shtml" target="_blank">
+        NIMH.nhi.gov
+    </a>.
+</sub>
 </p>
 <br>
 <p>
