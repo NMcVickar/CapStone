@@ -32,8 +32,22 @@ export default function(state){
 </p>
 <br>
 <p>
-    I have delt with anxiety in my life and want to make this information more available to people. 
-    My sister has experienced traumatic events and we have had to help her with her anxiety.
+Generalized anxiety disorder symptoms include:
+
+<ul>
+    <li>Feeling restless, wound-up, or on-edge</li>
+    <li>Being easily fatigued</li>
+    <li>Having difficulty concentrating; mind going blank</li>
+    <li>Being irritable</li>
+    <li>Having muscle tension</li>
+    <li>Difficulty controlling feelings of worry</li>
+    <li>Having sleep problems, such as difficulty falling or staying asleep, restlessness, or unsatisfying sleep</li>
+</ul>
+
+</p>
+<br>
+<p>
+    I have delt with anxiety issues in my family and wanted to make this kind of information readily available.
     I have experience with trying to deal with it from an exteranl perspective and want people to know that it can be difficult, but it is worth it to get through it.
     
 </p>

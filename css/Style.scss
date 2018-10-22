@@ -62,6 +62,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    cursor: pointer;
   }
 
   .about > ul > li {
@@ -129,7 +130,8 @@ img {
   #navigation > ul {
     flex-direction: column;
   }
-  .about{
-    padding-inline-start: 0;
+  .about > ul{
+    padding-left: 0;
+    justify-content: space-around;
   }
 }
