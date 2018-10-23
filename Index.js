@@ -15,8 +15,6 @@ import store from './store/Store';
 var root = document.querySelector('#root');
 var router = new Navigo(window.location.origin);
 
-let i = 0;
-
 // The vars below are for the dropdown lits
 var tog = [ true, true, true ];
 var visibility = [ 'block', 'block', 'block' ];
@@ -85,14 +83,6 @@ router
 //     .on(eraseDot(), (params) => handelNavigation(params.page))
 //     .on('/', () => handelNavigation('Home'))
 //     .resolve();
-
-Axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
-    store.dispatch((state) => {
-        state.posts = response.data;
-
-        return state;
-    });
-});
 
 /* Axios.get(
      'https://api.openweathermap.org/data/2.5/weather?q=Belleville,62223&APPID=94f1c8fc237e5c6513b5c800e4c67e16'
