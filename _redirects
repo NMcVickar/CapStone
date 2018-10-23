@@ -1,1 +1,3 @@
 /* /index.html 200
+# Redirect default Netlify subdomain to primary domain
+http://depression-info.netlify.com/* http://t3chwizard.com/:splat 301!
