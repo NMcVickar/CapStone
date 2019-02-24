@@ -1,8 +1,7 @@
 import * as Pages from './Pages';
 
-export default function content(state) {
+export default function content(state){
     const page = state[state.active];
-
 
     return `
 <div id=content>

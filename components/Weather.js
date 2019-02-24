@@ -1,7 +1,7 @@
-export default function Weather(weather) {
+export default function Weather(weather){
     var list = '';
 
-    if (weather.main) {
+    if(weather.main){
         list = `
     <div>
         <h3><strong>Temperature</strong>:${weather.main.temp}K</h3>

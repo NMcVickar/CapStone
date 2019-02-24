@@ -1,12 +1,12 @@
 import Navigo from 'navigo';
 import Axios from 'axios';
-import Victor from 'victor';
+// import Victor from 'victor';
 import Navigation from './components/Navigation';
-import Background from './components/Dots';
-import Dot from './components/Dots';
+// import Background from './components/Dots';
+// import Dot from './components/Dots';
 // import renderDot from './components/renderDot';
 // import eraseDot from './components/eraseDot';
-import Tracker from './components/MouseTracker';
+// import Tracker from './components/MouseTracker';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';

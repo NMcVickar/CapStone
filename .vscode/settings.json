@@ -2,5 +2,7 @@
 	"git.enableCommitSigning": true,
 	"git.enableSmartCommit": true,
 	"git.showPushSuccessNotification": true,
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"editor.detectIndentation": false,
+	"prettier.singleQuote": true
 }

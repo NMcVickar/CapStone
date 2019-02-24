@@ -4,14 +4,14 @@ export default function Background(){
     var height = document.getElementById('root').offsetHeight;
     var width = document.getElementById('root').offsetWidth;
     var random =
-        '#' +
-        (
-            '000000' +
-            Math.random()
-                .toString(16)
-                .slice(2, 8)
-                .toUpperCase()
-        ).slice(-6);
+		'#' +
+		(
+		    '000000' +
+			Math.random()
+			    .toString(16)
+			    .slice(2, 8)
+			    .toUpperCase()
+		).slice(-6);
 
     document.body.style.backgroundColor = random;
 }

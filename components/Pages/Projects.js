@@ -1,5 +1,5 @@
-export default function() {
-	return `
+export default function(){
+    return `
 <div id=content>
     <div class="container">
         <ol>
