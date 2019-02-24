@@ -71,6 +71,7 @@ function render(state){
 // End or Render Function
 
 function handelNavigation(activePage){
+    console.log(activePage);
     store.dispatch((state) => Object.assign(state, { 'active': activePage }));
 }
 
