@@ -13,7 +13,11 @@ function Link(link){
 }
 
 export default function Navigation(state){
-    var links = state.links.reduce((acc, link) => (acc += Link(link)), '');
+    var links = state
+        .links
+        .reduce((acc, link) => acc += Link(link),
+            ''
+        );
 
     return `
 <div id="navigation">

@@ -17,7 +17,7 @@ var router = new Navigo(window.location.origin);
 
 // The vars below are for the dropdown lits
 var tog = [ true, true, true ];
-var visibility = [ 'block', 'block', 'block' ];
+var visibility = [ 'none', 'none', 'none' ];
 var about;
 var dropdown;
 // End of Dropdown Vars
@@ -35,8 +35,6 @@ function show(event){
 function render(state){
     var state = store.getState();
 
-    console.log('state:', state);
-
     root.innerHTML = `
             ${Navigation(state[state.active])}
             ${Header(state)}
@@ -45,7 +43,7 @@ function render(state){
         `;
 
     // Setting Dropdown Lists values
-    about = document.querySelectorAll('.about>ul>li');
+    /* about = document.querySelectorAll('.about>ul>li');
     dropdown = document.querySelectorAll('.dropdown');
     for(let i = 0; i < about.length; i++){
         let li = about[i];
@@ -58,7 +56,7 @@ function render(state){
             drop.style.display = visibility[i];
             show(event);
         });
-    }
+    }*/
     // End of Dropdown set
 
     $('.carousel').carousel();
@@ -71,7 +69,6 @@ function render(state){
 // End or Render Function
 
 function handelNavigation(activePage){
-    console.log(activePage);
     store.dispatch((state) => Object.assign(state, { 'active': activePage }));
 }
 
@@ -85,16 +82,16 @@ router
 //     .on('/', () => handelNavigation('Home'))
 //     .resolve();
 
-/* Axios.get(
-     'https://api.openweathermap.org/data/2.5/weather?q=Belleville,62223&APPID=94f1c8fc237e5c6513b5c800e4c67e16'
- ).then((response) => {
-     store.dispatch((state) => {
-         state.Weather = response.data;
+Axios.get(
+    'https://api.openweathermap.org/data/2.5/weather?q=Belleville,62223&APPID=94f1c8fc237e5c6513b5c800e4c67e16'
+).then((response) => {
+    store.dispatch((state) => {
+        state.Weather = response.data;
 
-         return state;
-     });
- });
-*/
+        return state;
+    });
+});
+
 Axios.get('https://api.github.com/users/nmcvickar/repos', {
     'Headers': {
         Authorization: `token ${process.env.GITHUB_API_KEY}`, //eslint-disable-line
@@ -107,12 +104,5 @@ Axios.get('https://api.github.com/users/nmcvickar/repos', {
     });
 });
 
-/*
-store.dispatch((state) => {
-    state.dot = Dot();
-
-    return state;
-});
-*/
 
 store.addStateListener(render);
